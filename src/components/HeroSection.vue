@@ -1,14 +1,8 @@
 <template>
   <section class="relative min-h-screen flex items-center overflow-hidden">
     <!-- VIDEO BACKGROUND -->
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      class="absolute inset-0 w-full h-full object-cover object-[center_0%]"
-    >
-      <source src="../../public/assets/video2.mp4" type="video/mp4" />
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="../../public/assets/video1.mp4" type="video/mp4" />
     </video>
 
     <!-- OVERLAY ROXO -->
@@ -27,10 +21,10 @@
 
     <!-- CONTEÚDO -->
     <div
-      class="mt-20 w-full max-w-[120rem] mx-auto px-[4vw] grid grid-cols-1 lg:grid-cols-12 items-center relative z-10"
+      class="mt-28 w-full max-w-[120rem] mx-auto px-[4vw] grid grid-cols-1 lg:grid-cols-12 items-center relative z-10"
     >
       <!-- TEXTO -->
-      <div class="lg:col-span-7 pt-32 pb-16 lg:py-0 text-white">
+      <div class="lg:col-span-7 pt-32 lg:py-5 text-white">
         <div class="mb-6">
           <span
             class="inline-block text-xs font-semibold tracking-[3px] uppercase px-4 py-2 border border-white/30 text-white"
@@ -76,7 +70,18 @@
 </template>
 
 <style scoped>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 video {
   filter: brightness(0.8) contrast(0.9);
+  position: absolute;
+  top: -6%;   /* sobe o vídeo */
+  bottom: -10%; /* estende para baixo */
+  width: 100%;
+  height: 150%; /* força preencher além da tela */
+  object-fit: cover;
 }
 </style>
